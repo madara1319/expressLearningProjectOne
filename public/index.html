@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Express Test</title>
+    <meta property="og:title" content="Express Test" />
+    <meta property="og:description" content="checking whats about that express" />
+    <link rel="stylesheet" href="#" />
+<style>
+li{
+  display:none;
+}
+</style>
+  </head>
+  <body>
+
+  <button>Start</button>
+  <ul>
+    <li>element 1</li>
+    <li>element 2</li>
+    <li>element 3</li>
+    <li>element 4</li>
+    <li>element 5</li>
+    <li>element 6</li>
+    <li>element 7</li>
+    <li>element 8</li>
+    <li>element 9</li>
+    <li>element 10</li>
+  </ul>
+
+  <script >
+    let i=0;
+    const button=document.querySelector('button');
+    const lista=document.querySelectorAll('li');
+    button.addEventListener("click",()=>{
+    lista.forEach((element)=>{
+    element.style.display='flex';
+    i+=1; 
+    element.style.fontSize=`${i}px`;
+    });
+    })
+  </script>
+
+</body>
+</html>

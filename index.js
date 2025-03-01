@@ -12,8 +12,28 @@ app.get('/test', (req, res) => {
     res.send("Get Test");
 })
 
+
+app.post('/test', (req, res) => {
+    res.send("Post Test");
+})
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
+
+const options = {
+  dotfiles: 'ignore',
+  etag: false,
+  extensions: ['htm', 'html'],
+  index: true,
+  maxAge: '1d',
+  redirect: false,
+  setHeaders (res, path, stat) {
+    res.set('x-timestamp', Date.now())
+  }
+}
+
+app.use(express.static('public', options))
+
 
 
