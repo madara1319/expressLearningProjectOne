@@ -25,7 +25,7 @@ const options = {
   dotfiles: 'ignore',
   etag: false,
   extensions: ['htm', 'html'],
-  index: true,
+  index: false,
   maxAge: '1d',
   redirect: false,
   setHeaders (res, path, stat) {
