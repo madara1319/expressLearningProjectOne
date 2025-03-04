@@ -12,44 +12,6 @@ app.use('/array',arrayRoutes)
 
 //CRUD - Create, Read, Update, Delete
 
-app.get('/', (req, res) => {
-    res.send("Hello world!")
-})
-
-app.post('/array', (req, res) => {
-    res.send("You used create endpoint");
-})
-
-
-app.put('/array', (req, res) => {
-    res.send("You used update endpoint");
-})
-
-app.delete('/array', (req, res) => {
-    res.send('You used delete endpoint');
-})
-
-app.get('/array', (req, res) => {
-    res.send("You used read endpoint");
-})
-
-
-app.put('/array/:index', (req, res) => {
-    res.send("change specific number");
-})
-
-app.delete('/array/:index', (req, res) => {
-    res.send('delete specific number');
-})
-
-app.get('/array/:index', (req, res) => {
-    res.send("get specific number");
-})
-
-
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
 
 const options = {
     dotfiles: 'ignore',
@@ -65,5 +27,8 @@ const options = {
 
 app.use(express.static('public', options))
 
+app.listen(port, () => {
+    console.log(`Example router listening on port ${port}`)
+})
 
 
