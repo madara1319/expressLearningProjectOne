@@ -1,17 +1,12 @@
 const arrayRoutes = require('./routes/array.js'); 
-
+const cors = require('cors')
 const express = require('express');
 const app = express()
 const port = 3000;
 
 app.use(express.json())
 app.use('/array',arrayRoutes)
-//This app starts a server and listens on port 3000
-//for connections. The app responds with “Hello World!”
-//for requests to the root URL (/) or route. For every other path, it will respond with a 404 Not Found.
-
-//CRUD - Create, Read, Update, Delete
-
+app.use(cors())
 
 const options = {
     dotfiles: 'ignore',

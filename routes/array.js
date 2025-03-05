@@ -17,18 +17,6 @@ router.post('/', (req, res) => {
     res.json({ message: "Value added", array });
 })
 
-//router.put('/array', (req, res) => {
-//    res.send("You used update endpoint");
-//})
-//
-//router.delete('/array', (req, res) => {
-//    res.send('You used delete endpoint');
-//})
-//
-//router.get('/array', (req, res) => {
-//    res.send("You used read endpoint");
-//})
-
 
 router.put('/:index', (req, res) => {
     const index = parseInt(req.params.index);
