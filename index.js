@@ -16,9 +16,9 @@ const options = {
     dotfiles: 'ignore',
     etag: false,
     extensions: ['htm', 'html'],
-    index: false,
+    index: 'index.html',
     maxAge: '1d',
-    redirect: false,
+    redirect: true,
     setHeaders(res, path, stat) {
         res.set('x-timestamp', Date.now())
     }
